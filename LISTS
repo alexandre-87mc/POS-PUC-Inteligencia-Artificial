@@ -1,0 +1,127 @@
+#CREATE LISTS 
+lista_vazia = []
+lista_vazia2 = list()
+
+#TYPE
+print(type(lista_vazia))
+print(type(lista_vazia2))
+
+#SIZE
+print(len(lista_vazia))
+
+#CREATING LISTS WITH ELEMENTS
+lista = [23, 56, 2, -3, 10, 2, 18, 0, 5]
+lista_reais = [1.5, -2.13, 5.14]
+lista_strings = ["Rodrigo", "Python", "PUC Minas", "Ciência de Dados e Big Data"]
+lista_booleanos = [True, True, False, True]
+lista_misturada = [1, 2, 3.14159, "teste"]
+lista_misturada2 = [1, 2, 3.14159, "teste", [1, "A", 1.0]]
+listas_aninhadas = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+#ACESSING ELEMENTS
+print(lista[0])
+print(lista_strings[3])
+print(lista_misturada2[4][1])
+#aceess index that dosn't exists causes error --> ex. print(lista[20])
+
+#MODIFY LISTS ELEMENTS
+print(lista)
+lista[1] = 18
+print(lista)
+lista[2] = lista[0] + lista[1]
+print(lista)
+
+#LISTS METHODS
+
+#append()
+lista.append(17)
+print(lista)
+
+#clear()
+lista_reais.clear()
+print(lista_reais)
+
+#copy() a list has a important detail
+copia = lista
+print(copia)
+copia[0] = 5
+print(copia)
+print(lista)
+lista[0]=23
+copia = lista.copy()
+copia[0] = 5
+print(copia)
+print(lista)
+
+#count()
+cont1 =copia.count(5)
+print(cont1)
+
+#extend()
+numeros = [1,2,3]
+numeros.append([4,5])
+print(numeros)
+numeros = [1,2,3]
+numeros.extend([4,5])
+print(numeros)
+
+#index
+lista = [1, 3, 7, 2, 3, 8, 4]
+print(lista.index(7))
+pos8 = lista.index(8)
+print(pos8)
+#access index that dosn't exists causes error --> ex. print(lista.index(20))
+
+#insert()
+lista.insert(2,"ABC")
+print(lista)
+#access index that dosn't exists adds to last position
+print(lista.insert(20,"xuxu"))
+
+#pop()
+valor = lista.pop(2)
+print(valor)
+#access index that dosn't exists causes error --> ex. lista.pop(20)
+
+#remove()
+print(lista_strings)
+lista_strings.remove("Rodrigo")
+#access element that dosn't exists causes error --> ex. lista_strings.remove("oh my god, error!")
+
+#reverse
+lista = [1, 2, 3, 4, 5, 6]
+print(lista)
+lista.reverse
+print(lista)
+
+#sort()
+lista = [6, 3, 1, 4, 2, 5]
+print(lista)
+lista.sort()
+print(lista)
+lista.sort(reverse=True)
+print(lista)
+lista_letras = ["Q", "W", "E", "R", "T", "Y", "A", "S", "D"]
+lista_letras.sort()
+print(lista_letras)
+lista_strings = ["GIH", "LYZ", "LFE", "ABC", "XMK"]
+lista_strings.sort()
+print(lista_strings)
+
+#APPLICABLE LISTS FUNCTIONS
+lista = [8, 3, 21, 14, 2, 45]
+lista_letras = ["Q", "W", "E", "R", "T", "Y", "A", "S", "D"]
+
+#len()
+print(len(lista))
+
+#max()
+print(max(lista))
+print(max(lista_letras))
+
+#min()
+print(min(lista))
+print(min(lista_letras))
+
+#sum()
+print(sum(lista))

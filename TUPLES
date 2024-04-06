@@ -1,0 +1,60 @@
+#CREATE TUPLES
+tupla_vazia = ()
+tupla_vazia2 = tuple()
+
+#CHECK TYPE
+type(tupla_vazia)
+
+#CHECK tupla_vazia2 IS A TUPLE INSTANCE
+isinstance(tupla_vazia2, tuple)
+
+#SIZE
+len(tupla_vazia)
+
+#CREATING TUPLES WITH ELEMENTS
+tupla1 = (3, 19, 4, 21, 3, 5, 13)
+tupla2 = (3, 19, 4, 21, 3, 5, 13, "tupla", (1, 2, 3))
+tupla3 = (3, 19, 4, 21, 3, 5, 13, "tupla", [1, 2, 3])
+
+print(tupla1[0])
+print(tupla1)
+print(tupla2[5])
+print(tupla2)
+print(tupla3[8])
+print(tupla3)
+#aceess index that dosn't exists causes error --> ex. print(tupla3[50])
+
+#TUPLE IMUTABILITY
+#Can't change tuple Ex. tupla1[0] = 5
+
+#Can change list inside tuple
+tupla3[8][1] = 5
+print(tupla3)
+
+#METHODS
+
+#count()
+print(tupla1.count(3))
+
+#index()
+print(tupla1.index(21))
+
+#FUNCTIONS
+
+#len
+print(len(tupla1))
+
+#max
+print(max(tupla1))
+
+#min
+print(min(tupla1))
+
+#sum
+print(sum(tupla1))
+
+#CONVERT TUPLE TO LIST
+lista = list(tupla1)
+print(lista)
+lista[6]=-1
+print(lista)
